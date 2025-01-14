@@ -44,6 +44,10 @@ h1 {
   font-size: 1.125rem;
 }
 
+.asterisk {
+  color: var(--green600);
+}
+
 #submit {
   color: white;
   background-color: var(--green600);
@@ -68,7 +72,13 @@ body {
   width: 21.4375rem;
   border-radius: 16px;
 }
-
+@media screen and (min-width: 48rem) {
+  .contact-form {
+    width: 43.125rem;
+    padding: 40px;
+    margin: 128px auto;
+  }
+}
 .col {
   display: flex;
   flex-direction: column;
@@ -92,9 +102,29 @@ body {
   border-color: var(--green600);
 }
 
+@media screen and (min-width: 48rem) {
+  .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .name .col {
+    width: 18.5625rem;
+  }
+}
+
 .option-container {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 48rem) {
+  .option-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .option {
@@ -104,9 +134,21 @@ body {
   border: 1px solid var(--grey500);
   border-radius: 8px;
   margin-bottom: 10px;
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .option {
+    width: 18.5625rem;
+  }
+}
+
+.option:hover {
+  background-color: var(--green200);
+  cursor: pointer;
 }
 
 .radio {
+  accent-color: var(--green600);
   margin-right: 12px;
 }
 
@@ -120,10 +162,20 @@ fieldset {
   padding: 0;
 }
 
+textarea {
+  resize: none;
+  height: 15rem;
+}
+@media screen and (min-width: 48rem) {
+  textarea {
+    height: 8.25rem;
+  }
+}
+
 .approve {
   display: flex;
-  justify-content: center;
   padding-right: 20px;
+  accent-color: var(--green600);
 }
 
 .error {
@@ -139,7 +191,6 @@ fieldset {
   width: 100%;
   position: fixed;
   top: 24px;
-  display: none;
 }
 
 .success-text {
@@ -153,6 +204,12 @@ fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 48rem) {
+  .success-text {
+    width: 28.125rem;
+    height: 6.6875rem;
+  }
 }
 
 .checkmark {

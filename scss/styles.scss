@@ -21,10 +21,13 @@ body {
   width: rem(343);
   border-radius: 16px;
 
-  @media and (min-width: 48rem) {
+  @media screen and (min-width: 48rem) {
+    width: rem(690);
+    padding: 40px;
+    margin: 128px auto;
   }
 
-  @media and (min-width: ) {
+  @media screen and (min-width: 90rem) {
   }
 }
 
@@ -51,9 +54,28 @@ body {
   border-color: var(--green600);
 }
 
+.name {
+  @media screen and (min-width: 48rem) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.name .col {
+  @media screen and (min-width: 48rem) {
+    width: rem(297);
+  }
+}
+
 .option-container {
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 48rem) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .option {
@@ -63,9 +85,19 @@ body {
   border: 1px solid var(--grey500);
   border-radius: 8px;
   margin-bottom: 10px;
+  font-size: rem(18);
+  @media screen and (min-width: 48rem) {
+    width: rem(297);
+  }
+}
+
+.option:hover {
+  background-color: var(--green200);
+  cursor: pointer;
 }
 
 .radio {
+  accent-color: var(--green600);
   margin-right: 12px;
 }
 
@@ -79,10 +111,19 @@ fieldset {
   padding: 0;
 }
 
+textarea {
+  resize: none;
+  height: rem(240);
+
+  @media screen and (min-width: 48rem) {
+    height: rem(132);
+  }
+}
+
 .approve {
   display: flex;
-  justify-content: center;
   padding-right: 20px;
+  accent-color: var(--green600);
 }
 
 .error {
@@ -101,7 +142,7 @@ fieldset {
   position: fixed;
   top: 24px;
 
-  display: none;
+  //display: none;
 }
 
 .success-text {
@@ -115,6 +156,11 @@ fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: 48rem) {
+    width: rem(450);
+    height: rem(107);
+  }
 }
 
 .checkmark {
