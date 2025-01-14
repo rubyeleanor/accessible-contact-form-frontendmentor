@@ -1,0 +1,170 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+:root {
+  --grey900: #2A4144;
+  --grey500: #86A2A5;
+  --green600: #0C7D69;
+  --green200: #E0F1E8;
+  --red: #D73C3C;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: var(--grey600);
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: -0.0625rem;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.125rem;
+}
+
+#submit {
+  color: white;
+  background-color: var(--green600);
+  width: 100%;
+  font-family: "karla", sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 150%;
+  height: 3.75rem;
+  border: none;
+  border-radius: 8px;
+}
+
+body {
+  background-color: var(--green200);
+}
+
+.contact-form {
+  background-color: white;
+  margin: 32px auto;
+  padding: 24px;
+  width: 21.4375rem;
+  border-radius: 16px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  border-radius: 8px;
+  border: 1px solid var(--grey500);
+  padding: 12px;
+  font-size: 1.125rem;
+  line-height: 150%;
+  font-family: "karla", sans-serif;
+}
+
+.field:hover {
+  border-color: var(--green600);
+  outline: none;
+}
+
+.field:active {
+  border-color: var(--green600);
+}
+
+.option-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid var(--grey500);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.radio {
+  margin-right: 12px;
+}
+
+.box-label,
+legend {
+  padding-bottom: 8px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.approve {
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.error {
+  margin: 8px 0 20px;
+  color: var(--red);
+}
+
+#contactme {
+  margin-right: 16px;
+}
+
+.success {
+  width: 100%;
+  position: fixed;
+  top: 24px;
+  display: none;
+}
+
+.success-text {
+  width: 20.4375rem;
+  height: 8.1875rem;
+  border-radius: 12px;
+  background-color: var(--grey900);
+  color: white;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkmark {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 8px;
+}
+
+.msgSent {
+  display: flex;
+}
+
+.success p {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */

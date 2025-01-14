@@ -1,0 +1,132 @@
+@forward "globals";
+
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+body {
+  background-color: var(--green200);
+}
+
+.contact-form {
+  background-color: white;
+  margin: 32px auto;
+  padding: 24px;
+  width: rem(343);
+  border-radius: 16px;
+
+  @media and (min-width: 48rem) {
+  }
+
+  @media and (min-width: ) {
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  border-radius: 8px;
+  border: 1px solid var(--grey500);
+  padding: 12px;
+  font-size: rem(18);
+  line-height: 150%;
+  font-family: "karla", sans-serif;
+}
+
+.field:hover {
+  border-color: var(--green600);
+  outline: none;
+}
+
+.field:active {
+  border-color: var(--green600);
+}
+
+.option-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid var(--grey500);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.radio {
+  margin-right: 12px;
+}
+
+.box-label,
+legend {
+  padding-bottom: 8px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.approve {
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.error {
+  margin: 8px 0 20px;
+  color: var(--red);
+}
+
+#contactme {
+  margin-right: 16px;
+}
+
+//success message
+
+.success {
+  width: 100%;
+  position: fixed;
+  top: 24px;
+
+  display: none;
+}
+
+.success-text {
+  width: rem(327);
+  height: rem(131);
+  border-radius: 12px;
+  background-color: var(--grey900);
+  color: white;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkmark {
+  height: rem(24);
+  width: rem(24);
+  margin-right: 8px;
+}
+
+.msgSent {
+  display: flex;
+}
+
+.success p {
+  margin: 0;
+}

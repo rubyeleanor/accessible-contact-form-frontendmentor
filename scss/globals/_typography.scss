@@ -1,0 +1,44 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error 'Don\'t use units when using the rem() function; only numbers.';
+  }
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: var(--grey600);
+  line-height: 150%;
+}
+
+h1 {
+  font-size: rem(32);
+  line-height: rem(32);
+  letter-spacing: rem(-1);
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.title {
+  font-size: rem(18);
+}
+
+#submit {
+  color: white;
+  background-color: var(--green600);
+  width: 100%;
+  font-family: "karla", sans-serif;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: 150%;
+  height: rem(60);
+  border: none;
+  border-radius: 8px;
+}
