@@ -27,13 +27,15 @@ body {
     margin: 128px auto;
   }
 
-  @media screen and (min-width: 90rem) {
+  @media screen and (min-width: 80rem) {
+    width: rem(736);
   }
 }
 
 .col {
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .field {
@@ -43,15 +45,22 @@ body {
   font-size: rem(18);
   line-height: 150%;
   font-family: "karla", sans-serif;
-}
-
-.field:hover {
-  border-color: var(--green600);
+  color: var(--grey900);
   outline: none;
 }
 
-.field:active {
+.field:hover,
+.field:active,
+.field:focus {
   border-color: var(--green600);
+  outline: none;
+  cursor: pointer;
+  border-width: 2px;
+}
+
+.field:user-invalid {
+  border-color: var(--red);
+  outline: none;
 }
 
 .name {
@@ -65,6 +74,9 @@ body {
 .name .col {
   @media screen and (min-width: 48rem) {
     width: rem(297);
+  }
+  @media screen and (min-width: 80rem) {
+    width: rem(320);
   }
 }
 
@@ -89,11 +101,19 @@ body {
   @media screen and (min-width: 48rem) {
     width: rem(297);
   }
+  @media screen and (min-width: 80rem) {
+    width: rem(320);
+  }
 }
 
 .option:hover {
-  background-color: var(--green200);
   cursor: pointer;
+  border: 2px solid var(--green600);
+}
+
+.option:has(input[type="radio"]:checked) {
+  background-color: var(--green200);
+  border: 1px solid var(--green600);
 }
 
 .radio {
@@ -109,6 +129,7 @@ legend {
 fieldset {
   border: none;
   padding: 0;
+  margin-bottom: 24px;
 }
 
 textarea {
@@ -118,17 +139,28 @@ textarea {
   @media screen and (min-width: 48rem) {
     height: rem(132);
   }
+
+  @media screen and (min-width: 80rem) {
+    height: rem(105);
+  }
+}
+
+.consent {
+  margin-bottom: 24px;
 }
 
 .approve {
-  display: flex;
   padding-right: 20px;
   accent-color: var(--green600);
 }
 
 .error {
-  margin: 8px 0 20px;
+  margin: 8px 0 0;
   color: var(--red);
+}
+
+.error:empty {
+  display: none;
 }
 
 #contactme {
@@ -142,7 +174,7 @@ textarea {
   position: fixed;
   top: 24px;
 
-  //display: none;
+  display: none;
 }
 
 .success-text {

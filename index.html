@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -40,21 +40,33 @@
     <section class="contact-form">
       <h1 class="bold">Contact Us</h1>
 
-      <form action="">
+      <form action="" novalidate>
         <div class="name">
           <div class="first col">
             <label for="first-name" class="box-label"
               >First Name <span class="asterisk">*</span></label
             >
-            <input type="text" id="first-name" name="first" class="field" />
-            <p class="error">This field is required</p>
+            <input
+              type="text"
+              id="first-name"
+              name="first"
+              class="field"
+              required
+            />
+            <p class="error" id="first-err" aria-live="polite"></p>
           </div>
           <div class="last col">
             <label for="last-name" class="box-label"
               >Last Name <span class="asterisk">*</span></label
             >
-            <input type="text" id="last-name" name="last" class="field" />
-            <p class="error">This field is required</p>
+            <input
+              type="text"
+              id="last-name"
+              name="last"
+              class="field"
+              required
+            />
+            <p class="error" id="last-err" aria-live="polite"></p>
           </div>
         </div>
 
@@ -62,8 +74,15 @@
           <label for="email" class="box-label"
             >Email address <span class="asterisk">*</span></label
           >
-          <input type="email" id="email" name="email" class="field" />
-          <p class="error invalid-email">Please enter a valid email address</p>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="field"
+            data-error="Please enter a valid email address"
+            required
+          />
+          <p class="error" id="email-err" aria-live="polite"></p>
         </div>
 
         <div class="query">
@@ -77,6 +96,7 @@
                   name="query"
                   value="general"
                   class="radio"
+                  required
                 />
                 <label for="general" class="radio">General Enquiry</label>
               </div>
@@ -87,11 +107,12 @@
                   name="query"
                   value="support"
                   class="radio"
+                  required
                 />
                 <label for="support" class="radio">Support Request</label>
               </div>
             </div>
-            <p class="error">Please select a query type</p>
+            <p class="error" id="query-err" aria-live="polite"></p>
           </fieldset>
         </div>
 
@@ -99,24 +120,33 @@
           <label for="message" class="box-label"
             >Message <span class="asterisk">*</span></label
           >
-          <textarea id="message" name="message" class="field"></textarea>
-          <p class="error">This field is required</p>
+          <textarea
+            id="message"
+            name="message"
+            class="field"
+            required
+          ></textarea>
+          <p class="error" id="msg-err" aria-live="polite"></p>
         </div>
 
         <div class="consent">
           <div class="approve">
-            <input type="checkbox" id="contactme" name="consent" />
+            <input
+              type="checkbox"
+              id="contactme"
+              name="consent"
+              required
+              data-error="To submit this form, please consent to being contacted"
+            />
             <label for="contactme"
               >I hereby consent to being contacted by the team
               <span class="asterisk">*</span></label
             >
+            <p class="error" id="consent-err" aria-live="polite"></p>
           </div>
-          <p class="error consent-error">
-            To submit this form, please consent to being contacted
-          </p>
         </div>
 
-        <input type="submit" name="submit" value="Submit" id="submit" />
+        <button type="submit" name="submit" id="submit">Submit</button>
       </form>
     </section>
 
@@ -137,7 +167,9 @@
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Ruby</a>.
     </div>
+
+    <script src="./dist/script.js"></script>
   </body>
 </html>

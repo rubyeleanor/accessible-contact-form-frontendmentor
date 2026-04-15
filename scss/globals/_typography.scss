@@ -10,7 +10,7 @@
 
 body {
   font-family: "Karla", sans-serif;
-  color: var(--grey600);
+  color: var(--grey900);
   line-height: 150%;
 }
 
@@ -45,4 +45,12 @@ h1 {
   height: rem(60);
   border: none;
   border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+#submit:hover,
+submit:focus {
+  background-color: #0c4137;
+  transition: 0.3s ease;
 }
