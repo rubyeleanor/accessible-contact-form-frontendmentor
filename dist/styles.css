@@ -116,7 +116,6 @@ body {
   border-color: var(--green600);
   outline: none;
   cursor: pointer;
-  border-width: 2px;
 }
 
 .field:user-invalid {
@@ -176,7 +175,7 @@ body {
 
 .option:hover {
   cursor: pointer;
-  border: 2px solid var(--green600);
+  border-color: var(--green600);
 }
 
 .option:has(input[type=radio]:checked) {

@@ -1,6 +1,6 @@
-@forward "globals";
+@forward 'globals';
 
-@use "sass:math";
+@use 'sass:math';
 
 @function rem($pixel) {
   @if math.is-unitless($pixel) {
@@ -44,7 +44,7 @@ body {
   padding: 12px;
   font-size: rem(18);
   line-height: 150%;
-  font-family: "karla", sans-serif;
+  font-family: 'karla', sans-serif;
   color: var(--grey900);
   outline: none;
 }
@@ -55,7 +55,6 @@ body {
   border-color: var(--green600);
   outline: none;
   cursor: pointer;
-  border-width: 2px;
 }
 
 .field:user-invalid {
@@ -108,10 +107,10 @@ body {
 
 .option:hover {
   cursor: pointer;
-  border: 2px solid var(--green600);
+  border-color: var(--green600);
 }
 
-.option:has(input[type="radio"]:checked) {
+.option:has(input[type='radio']:checked) {
   background-color: var(--green200);
   border: 1px solid var(--green600);
 }
